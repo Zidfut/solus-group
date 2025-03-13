@@ -31,8 +31,8 @@ gsap.utils.toArray(".animation--fade-in").forEach((item) => {
 });
 
 gsap.to(".header", {
-  height: 80,
-  background: "linear-gradient(180deg, rgba(15,14,15,1) 30%, rgba(15,14,15,0.1) 100%)",
+  height: 60,
+  background: "linear-gradient(180deg, rgba(15,14,15,1) 10%, rgba(15,14,15,0) 100%)",
   duration: 0.3,
   scrollTrigger: {
     trigger: "body",
