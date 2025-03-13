@@ -119,7 +119,7 @@
             background-color: rgba(#AEAEAE, .08);
             border-radius: 20px;
             backdrop-filter: blur(10px);
-            will-change: opacity;
+            will-change: transform, opacity;
             position: relative;
             z-index: 2;
 
