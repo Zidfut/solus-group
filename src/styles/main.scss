@@ -1,0 +1,385 @@
+@use 'config' as *;
+@use 'blocks/**/*';
+
+.hero {
+    background-image: url('../assets/img/hero-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    &__content {
+        height: 100vh;
+        max-height: 1080px;
+        min-height: 600px;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .h1 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: $secondtext;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 40px;
+        max-width: 540px;
+    }
+
+    @include media-breakpoint-down(md) {
+        p {
+            font-size: 19px;
+            line-height: 26px;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-image: url('../assets/img/hero-bg-mob.png');
+        
+        p {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+.services {
+    padding: 100px 0;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 16px;
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
+            border: 1px solid $accent;
+            cursor: pointer;
+            transition: .3s ease;
+
+            &.swiper-button-disabled {
+                opacity: 0.35;
+            }
+
+            &:not(.swiper-button-disabled):hover {
+                background-color: $accent;
+                svg path {
+                    fill: $dark;
+                }
+            }
+        }
+    }
+
+    &__slider {
+        margin-top: 80px;
+        width: 100%;
+
+        &-wrapper {
+            position: relative;
+            height: 100%;
+
+            &::before {
+                content: counter(item, decimal-leading-zero);
+                font-size: 64px;
+                line-height: 1;
+                font-weight: 600;
+                font-family: nuber-next, sans-serif;
+                color: $accent;
+                position: absolute;
+                top: -45px;
+                left: 0;
+                z-index: -1;
+            }
+        }
+        
+        &-card {
+            height: 100%;
+            padding: 40px 40px 48px;
+            background-color: rgba(#AEAEAE, .08);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 1;
+
+            &-img {
+                display: block;
+                width: 100px;
+                margin-bottom: 32px;
+            }
+
+            &-title {
+                font-size: 26px;
+                line-height: 32px;
+                font-weight: 600;
+                color: $maintext;
+                margin-bottom: 24px;
+            }
+
+            &-text {
+                font-size: 16px;
+                line-height: 24px;
+                color: $secondtext;
+            }
+        }
+
+        .swiper-wrapper {
+            counter-reset: item;
+            padding-top: 45px;
+            margin-bottom: 40px;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            counter-increment: item;
+            height: initial;
+            display: flex;
+            justify-content: center;
+        }
+
+        .swiper-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+
+            .swiper-pagination-bullet {
+                width: 12px;
+                height: 12px;
+                border: 1px solid $accent;
+                border-radius: 100%;
+                cursor: pointer;
+                transition: background-color .2s ease;
+
+                &:not(.swiper-pagination-bullet-active):hover {
+                    background-color: rgba($accent, .5);
+                }
+
+                &-active {
+                    background-color: $accent;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        padding: 80px 0;
+
+        &__slider {            
+            &-card {
+                padding: 34px 34px 40px;
+            }
+    
+            .swiper-wrapper {
+                counter-reset: item;
+                padding-top: 45px;
+                margin-bottom: 40px;
+                align-items: stretch;
+            }
+    
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__slider {
+            margin-top: 60px;
+    
+            &-card {
+                padding: 38px 38px 44px;
+            }        
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .h2 {
+            max-width: 380px;
+        }
+        &__slider {
+            margin-top: 50px;
+    
+            &-card {
+                padding: 28px 28px 34px;
+
+                &-img {
+                    width: 80px;
+                    margin-bottom: 22px;
+                }
+    
+                &-title {
+                    font-size: 24px;
+                    line-height: 30px;
+                    margin-bottom: 20px;
+                }
+
+                &-text {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+
+            }     
+               
+            &-wrapper {
+                &::before {
+                    font-size: 58px;
+                    top: -40px;
+                }
+            }
+        }
+
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 40px 0 80px;
+
+        .h2 {
+            max-width: 100%;
+        }
+
+        &__nav {
+            order: 2;
+            width: 100%;
+            justify-content: center;
+        }
+
+        &__slider {
+            margin-top: 40px;
+
+            &-card {
+                padding: 32px;
+
+                &-img {
+                    width: 80px;
+                    margin-bottom: 32px;
+                }
+    
+                &-title {
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin-bottom: 16px;
+                }
+
+                &-text {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+            } 
+    
+            &-wrapper {
+                max-width: 384px;
+
+                &::before {
+                    font-size: 56px;
+                }
+            }
+        }
+
+        .swiper-pagination {
+            display: none;
+        }
+    }
+}
+
+.contacts {
+    padding: 100px 0 200px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .h2 {
+        margin-bottom: 20px;
+    }
+
+    &__content {
+        width: 50%;
+        padding-right: 70px;
+
+        p {
+            font-size: 16px;
+            line-height: 24px;
+            color: $secondtext;
+        }
+    }
+
+    &__schedule {
+        width: 50%;
+
+        &-wrapper {
+            width: 100%;
+            max-width: 500px;
+            height: 630px;
+            border: 1px solid $accent;
+            border-radius: 32px;
+            margin-left: auto;
+            padding: 10px;
+        }
+    }
+    
+
+    .calendly-inline-widget {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    @include media-breakpoint-down(xl) {
+        &__content {
+            width: 55%;
+            padding-right: 20px;
+        }
+        &__schedule {
+            width: 45%;
+            &-wrapper {
+                max-width: 480px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: 80px 0 160px;
+
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__content {
+            width: 100%;
+            padding-right: 20px;
+            margin-bottom: 40px;
+        }
+
+        &__schedule {
+            width: 100%;
+            &-wrapper {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        &__content {
+            padding-right: 0;
+        }
+    }
+}

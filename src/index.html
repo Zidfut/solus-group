@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Verse</title>
+
+  <link rel="stylesheet" href="styles/main.scss">
+  <script type="module" src="js/app.js"></script>
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__navbar">
+        <a href="/" class="header__logo">
+          <img class="header__logo-img" src="assets/img/logo.svg" alt="CryptoVerse">
+        </a>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#services" class="header__link">Services</a>
+            </li>
+            <li class="header__item">
+              <a href="#contact" class="header__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="burger">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content animation--fade-up">
+        <h1 class="h1">Discover the Power of Crypto & Blockchain</h1>
+        <p>Welcome to our educational platform where we demystify the world of cryptocurrency and blockchain technology.
+          Join us on this educational journey and unlock the potential of crypto and blockchain for your future.</p>
+        <a href="#contact" class="btn btn--accent">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <div class="services__wrapper">
+        <h2 class="h2 animation--fade-up">Services we provide</h2>
+        <div class="services__nav animation--fade-up">
+          <div class="services__nav-btn services__nav-btn--prev">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21.0001 12C21.0001 12.1989 20.9211 12.3897 20.7804 12.5303C20.6398 12.671 20.449 12.75 20.2501 12.75H5.56041L11.0307 18.2194C11.1004 18.289 11.1557 18.3718 11.1934 18.4628C11.2311 18.5539 11.2505 18.6514 11.2505 18.75C11.2505 18.8485 11.2311 18.9461 11.1934 19.0372C11.1557 19.1282 11.1004 19.2109 11.0307 19.2806C10.961 19.3503 10.8783 19.4056 10.7873 19.4433C10.6962 19.481 10.5986 19.5004 10.5001 19.5004C10.4016 19.5004 10.304 19.481 10.2129 19.4433C10.1219 19.4056 10.0392 19.3503 9.96948 19.2806L3.21948 12.5306C3.14974 12.461 3.09443 12.3782 3.05668 12.2872C3.01894 12.1961 2.99951 12.0986 2.99951 12C2.99951 11.9014 3.01894 11.8038 3.05668 11.7128C3.09443 11.6217 3.14974 11.539 3.21948 11.4694L9.96948 4.71936C10.1102 4.57863 10.3011 4.49957 10.5001 4.49957C10.6991 4.49957 10.89 4.57863 11.0307 4.71936C11.1715 4.8601 11.2505 5.05097 11.2505 5.24999C11.2505 5.44901 11.1715 5.63988 11.0307 5.78061L5.56041 11.25H20.2501C20.449 11.25 20.6398 11.329 20.7804 11.4697C20.9211 11.6103 21.0001 11.8011 21.0001 12Z"
+                fill="#FFD722" />
+            </svg>
+          </div>
+          <div class="services__nav-btn services__nav-btn--next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.7806 12.5306L14.0306 19.2806C13.8899 19.4213 13.699 19.5004 13.5 19.5004C13.301 19.5004 13.1101 19.4213 12.9694 19.2806C12.8286 19.1399 12.7496 18.949 12.7496 18.75C12.7496 18.551 12.8286 18.3601 12.9694 18.2194L18.4397 12.75H3.75C3.55109 12.75 3.36032 12.671 3.21967 12.5303C3.07902 12.3897 3 12.1989 3 12C3 11.8011 3.07902 11.6103 3.21967 11.4697C3.36032 11.329 3.55109 11.25 3.75 11.25H18.4397L12.9694 5.78061C12.8286 5.63988 12.7496 5.44901 12.7496 5.24999C12.7496 5.05097 12.8286 4.8601 12.9694 4.71936C13.1101 4.57863 13.301 4.49957 13.5 4.49957C13.699 4.49957 13.8899 4.57863 14.0306 4.71936L20.7806 11.4694C20.8504 11.539 20.9057 11.6217 20.9434 11.7128C20.9812 11.8038 21.0006 11.9014 21.0006 12C21.0006 12.0986 20.9812 12.1961 20.9434 12.2872C20.9057 12.3782 20.8504 12.461 20.7806 12.5306Z"
+                fill="#FFD722" />
+            </svg>
+          </div>
+        </div>
+        <div class="services__slider swiper animation--fade-up">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="services__slider-wrapper">
+                <div class="services__slider-card">
+                  <img class="services__slider-card-img" src="assets/img/service-icon1.svg" alt="Crypto Basics">
+                  <h3 class="services__slider-card-title">Crypto Basics</h3>
+                  <p class="services__slider-card-text">Learn the fundamentals of cryptocurrency and blockchain
+                    technology. We'll explain what cryptocurrencies are, how they work, and the underlying technology
+                    that makes them secure and decentralized.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="services__slider-wrapper">
+                <div class="services__slider-card">
+                  <img class="services__slider-card-img" src="assets/img/service-icon2.svg" alt="Investing and Trading">
+                  <h3 class="services__slider-card-title">Investing and Trading</h3>
+                  <p class="services__slider-card-text">Discover the strategies and tools you need to invest and trade
+                    cryptocurrencies effectively. From understanding market trends and managing risk to using trading
+                    platforms and analyzing charts, we'll equip you with the knowledge to make informed investment
+                    decisions.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="services__slider-wrapper">
+                <div class="services__slider-card">
+                  <img class="services__slider-card-img" src="assets/img/service-icon3.svg"
+                    alt="Blockchain Applications">
+                  <h3 class="services__slider-card-title">Blockchain Applications</h3>
+                  <p class="services__slider-card-text">Explore the diverse applications of blockchain technology beyond
+                    cryptocurrencies. Understand how blockchain is revolutionizing industries such as finance, supply
+                    chain management, healthcare, and more. Uncover the potential for decentralized applications and
+                    smart contracts.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="services__slider-wrapper">
+                <div class="services__slider-card">
+                  <img class="services__slider-card-img" src="assets/img/service-icon1.svg" alt="Crypto Basics">
+                  <h3 class="services__slider-card-title">Crypto Basics</h3>
+                  <p class="services__slider-card-text">Learn the fundamentals of cryptocurrency and blockchain
+                    technology. We'll explain what cryptocurrencies are, how they work, and the underlying technology
+                    that makes them secure and decentralized.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="services__slider-wrapper">
+                <div class="services__slider-card">
+                  <img class="services__slider-card-img" src="assets/img/service-icon2.svg" alt="Investing and Trading">
+                  <h3 class="services__slider-card-title">Investing and Trading</h3>
+                  <p class="services__slider-card-text">Discover the strategies and tools you need to invest and trade
+                    cryptocurrencies effectively. From understanding market trends and managing risk to using trading
+                    platforms and analyzing charts, we'll equip you with the knowledge to make informed investment
+                    decisions.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="services__slider-wrapper">
+                <div class="services__slider-card">
+                  <img class="services__slider-card-img" src="assets/img/service-icon3.svg"
+                    alt="Blockchain Applications">
+                  <h3 class="services__slider-card-title">Blockchain Applications</h3>
+                  <p class="services__slider-card-text">Explore the diverse applications of blockchain technology beyond
+                    cryptocurrencies. Understand how blockchain is revolutionizing industries such as finance, supply
+                    chain management, healthcare, and more. Uncover the potential for decentralized applications and
+                    smart contracts.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="services__slider-wrapper">
+                <div class="services__slider-card">
+                  <img class="services__slider-card-img" src="assets/img/service-icon1.svg" alt="Crypto Basics">
+                  <h3 class="services__slider-card-title">Crypto Basics</h3>
+                  <p class="services__slider-card-text">Learn the fundamentals of cryptocurrency and blockchain
+                    technology. We'll explain what cryptocurrencies are, how they work, and the underlying technology
+                    that makes them secure and decentralized.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="services__slider-wrapper">
+                <div class="services__slider-card">
+                  <img class="services__slider-card-img" src="assets/img/service-icon2.svg" alt="Investing and Trading">
+                  <h3 class="services__slider-card-title">Investing and Trading</h3>
+                  <p class="services__slider-card-text">Discover the strategies and tools you need to invest and trade
+                    cryptocurrencies effectively. From understanding market trends and managing risk to using trading
+                    platforms and analyzing charts, we'll equip you with the knowledge to make informed investment
+                    decisions.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="services__slider-wrapper">
+                <div class="services__slider-card">
+                  <img class="services__slider-card-img" src="assets/img/service-icon3.svg"
+                    alt="Blockchain Applications">
+                  <h3 class="services__slider-card-title">Blockchain Applications</h3>
+                  <p class="services__slider-card-text">Explore the diverse applications of blockchain technology beyond
+                    cryptocurrencies. Understand how blockchain is revolutionizing industries such as finance, supply
+                    chain management, healthcare, and more. Uncover the potential for decentralized applications and
+                    smart contracts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contacts">
+    <div class="container">
+      <div class="contacts__wrapper">
+        <div class="contacts__content animation--fade-up">
+          <h2 class="h2">Start your crypto education today!</h2>
+          <p class="contacts__content-text">Schedule Your introductory call! We'll explain what cryptocurrencies are,
+            how they work, and the underlying technology that makes them secure and decentralized.</p>
+        </div>
+        <div class="contacts__schedule animation--fade-up">
+          <div class="contacts__schedule-wrapper">
+            <div class="calendly-inline-widget"
+              data-url="https://calendly.com/aleksandr-petryha/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0f0e0f&text_color=aeaeae&primary_color=ffd722">
+            </div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="/" class="footer__logo">
+          <img src="assets/img/logo.svg" alt="CryptoVerse">
+        </a>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li>
+              <a class="footer__nav-link" href="#services">Services</a>
+            </li>
+            <li>
+              <a class="footer__nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__socials">
+          <ul class="footer__socials-list">
+            <li>
+              <a class="footer__socials-link" href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.63206 15.4996V5.37882H0.202169V15.4996H3.63242H3.63206ZM1.91783 3.99722C3.11365 3.99722 3.85813 3.22006 3.85813 2.24883C3.83575 1.25547 3.11365 0.5 1.94057 0.5C0.766684 0.5 0 1.25547 0 2.24874C0 3.21998 0.744211 3.99714 1.89536 3.99714H1.91756L1.91783 3.99722ZM5.53055 15.4996H8.96017V9.84833C8.96017 9.54624 8.98255 9.24337 9.07316 9.02761C9.32099 8.423 9.88533 7.79715 10.8331 7.79715C12.0738 7.79715 12.5705 8.72517 12.5705 10.0859V15.4996H16V9.69667C16 6.58811 14.3082 5.14154 12.0516 5.14154C10.2016 5.14154 9.38904 6.15571 8.9376 6.84646H8.96044V5.37917H5.53073C5.57549 6.32862 5.53046 15.5 5.53046 15.5L5.53055 15.4996Z"
+                    fill="#E8E8E8" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="footer__socials-link" href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1_583)">
+                    <path
+                      d="M12.6009 0.5H15.0542L9.69434 6.85395L16 15.5H11.0626L7.19566 10.2561L2.77091 15.5H0.315906L6.04887 8.70386L0 0.5H5.06247L8.55797 5.29301L12.6009 0.5ZM11.7398 13.9769H13.0993L4.32384 1.94319H2.86509L11.7398 13.9769Z"
+                      fill="#E8E8E8" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_583">
+                      <rect width="16" height="15" fill="white" transform="translate(0 0.5)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="footer__socials-link" href="#">
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.9338 8.07752L0.320378 6.91788C0.320378 6.91788 -0.111466 6.7453 0.0275876 6.35398C0.0562126 6.27328 0.113956 6.20461 0.286694 6.08661C1.08733 5.53693 15.1058 0.573984 15.1058 0.573984C15.1058 0.573984 15.5017 0.442609 15.7351 0.52999C15.7928 0.547598 15.8448 0.58 15.8857 0.623881C15.9265 0.667762 15.9548 0.721547 15.9677 0.779735C15.9929 0.882509 16.0034 0.988247 15.999 1.09389C15.9979 1.18528 15.9867 1.26999 15.9782 1.40282C15.8928 2.75971 13.3377 12.8866 13.3377 12.8866C13.3377 12.8866 13.1849 13.4792 12.6372 13.4995C12.5026 13.5038 12.3685 13.4813 12.2429 13.4335C12.1173 13.3856 12.0028 13.3133 11.9061 13.2209C10.8313 12.3103 7.11649 9.85126 6.29561 9.31045C6.2771 9.29802 6.2615 9.28183 6.24988 9.26296C6.23826 9.24409 6.23088 9.22299 6.22824 9.20107C6.21677 9.14407 6.2797 9.07346 6.2797 9.07346C6.2797 9.07346 12.7482 3.41014 12.9203 2.81561C12.9337 2.76955 12.8833 2.74683 12.8157 2.767C12.3861 2.92268 4.93839 7.5553 4.11641 8.06658C4.05724 8.08422 3.9947 8.08796 3.9338 8.07752Z"
+                    fill="#E8E8E8" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2025 CryptoVerse Academy. All rights reserved</span>
+        <ul class="footer__policy">
+          <li>
+            <a class="footer__policy-link" href="#">Terms of Service</a>
+          </li>
+          <li>
+            <a class="footer__policy-link" href="#">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

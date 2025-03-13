@@ -1,0 +1,90 @@
+@use 'sass:map';
+
+$maintext: #E8E8E8;
+$secondtext: #D9D9D9;
+$lighttext: #AEAEAE;
+$dark: #0F0E0F;
+$accent: #FFD722;
+$gutter: 30px;
+$fontsize: 16px; 
+$lineheight: 1.65;
+$textcolor: #151515;
+$userfont: inter, sans-serif;
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format('woff2');
+  }
+}
+
+@include font('inter', normal, 400, '../assets/fonts/inter-regular.woff2');
+@include font('inter', normal, 500, '../assets/fonts/inter-medium.woff2');
+@include font('inter', normal, 600, '../assets/fonts/inter-semibold.woff2');
+@include font('nuber-next', normal, 600, '../assets/fonts/nuber_next_wide-demibold.woff2');
+@include font('nuber-next', normal, 800, '../assets/fonts/nuber_next_wide-heavy.woff2');
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map.get($breakpoints, $name); @return if($min != 0, $min, null);
+}
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $max: map.get($breakpoints, $name); @return if($max and $max > 0, $max - .02, null);
+}
+
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min { @media (min-width: $min) { @content; } } @else { @content; }
+}
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max { @media (max-width: $max) { @content; } } @else { @content; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $userfont;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  color: $maintext;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  background-color: $dark;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: $accent;
+  color: $dark;
+}
+
+button, input, select, textarea {
+  line-height: inherit;
+  outline: none;
+}
