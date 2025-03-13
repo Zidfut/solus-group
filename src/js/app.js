@@ -10,10 +10,22 @@ gsap.utils.toArray(".animation--fade-up").forEach((item) => {
   gsap.from(item, {
     opacity: 0,
     y: 100,
-    duration: 1.5,
+    duration: 1,
     scrollTrigger: {
       trigger: item,
-      start: "top 70%"
+      start: "top 80%"
+    }
+  });
+});
+
+gsap.utils.toArray(".animation--fade-in").forEach((item) => {
+  gsap.from(item, {
+    opacity: 0,
+    delay: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: item,
+      start: "top 80%"
     }
   });
 });

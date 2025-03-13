@@ -96,6 +96,21 @@
             position: relative;
             height: 100%;
 
+            // &::before {
+            //     content: counter(item, decimal-leading-zero);
+            //     font-size: 64px;
+            //     line-height: 1;
+            //     font-weight: 600;
+            //     font-family: nuber-next, sans-serif;
+            //     color: $accent;
+            //     position: absolute;
+            //     top: -45px;
+            //     left: 0;
+            //     z-index: 1;
+            // }
+        }
+
+        &-num {
             &::before {
                 content: counter(item, decimal-leading-zero);
                 font-size: 64px;
@@ -106,7 +121,7 @@
                 position: absolute;
                 top: -45px;
                 left: 0;
-                z-index: -1;
+                z-index: 1;
             }
         }
         
@@ -117,7 +132,7 @@
             border-radius: 20px;
             backdrop-filter: blur(10px);
             position: relative;
-            z-index: 1;
+            z-index: 2;
 
             &-img {
                 display: block;
