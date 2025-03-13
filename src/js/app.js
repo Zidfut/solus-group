@@ -21,7 +21,7 @@ gsap.utils.toArray(".animation--fade-up").forEach((item) => {
 gsap.utils.toArray(".animation--fade-in").forEach((item) => {
   gsap.from(item, {
     opacity: 0,
-    delay: .8,
+    delay: 1,
     duration: .8,
     scrollTrigger: {
       trigger: item,
