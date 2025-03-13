@@ -13,7 +13,7 @@ gsap.utils.toArray(".animation--fade-up").forEach((item) => {
     duration: 1,
     scrollTrigger: {
       trigger: item,
-      start: "top 80%"
+      start: "top 90%"
     }
   });
 });
@@ -25,7 +25,7 @@ gsap.utils.toArray(".animation--fade-in").forEach((item) => {
     duration: .8,
     scrollTrigger: {
       trigger: item,
-      start: "top 80%"
+      start: "top 90%"
     }
   });
 });

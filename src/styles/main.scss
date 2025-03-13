@@ -95,19 +95,6 @@
         &-wrapper {
             position: relative;
             height: 100%;
-
-            // &::before {
-            //     content: counter(item, decimal-leading-zero);
-            //     font-size: 64px;
-            //     line-height: 1;
-            //     font-weight: 600;
-            //     font-family: nuber-next, sans-serif;
-            //     color: $accent;
-            //     position: absolute;
-            //     top: -45px;
-            //     left: 0;
-            //     z-index: 1;
-            // }
         }
 
         &-num {
@@ -122,6 +109,7 @@
                 top: -45px;
                 left: 0;
                 z-index: 1;
+                will-change: opacity;
             }
         }
         
@@ -131,6 +119,7 @@
             background-color: rgba(#AEAEAE, .08);
             border-radius: 20px;
             backdrop-filter: blur(10px);
+            will-change: opacity;
             position: relative;
             z-index: 2;
 
